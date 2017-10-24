@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style type="text/css">
+            div {
+                width: 100px;
+                height: 100px;
+                /* Para deixar o texto centralizado na div,
+                podemos colocar um line-height igual à altura
+                dela. Só funciona bem se o texto tiver uma
+                linha só.
+                */
+                line-height: 100px;
+                text-align: center;
+                font-size: 25px;
+            }
+            .container {
+                width: 400px;
+            }
+            .primeiro {
+                background-color: red;
+            }
+            .segundo {
+                background-color: blue;
+            }
+            .terceiro {
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                background-color: green;
+            }
+            .quarto {
+                background-color: orange;
+            }
+            .quinto {
+                background-color: magenta;
+            }
+
+            /* regras propostas */
+            .primeiro,
+            .segundo {
+                float: left;
+            }
+            .terceiro,
+            .quarto,
+            .quinto {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="primeiro">1</div>
+            <div class="segundo">2</div>
+            <div class="terceiro">3</div>
+            <div class="quarto">4</div>
+            <div class="quinto">5</div>
+        </div>
+    </body>
+</html>

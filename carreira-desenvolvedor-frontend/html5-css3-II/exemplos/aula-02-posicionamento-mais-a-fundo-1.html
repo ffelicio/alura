@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Dessa forma o h2 ficará no topo da ul, sobreposto */
+            h2 {
+                position: absolute;
+                top: 0;
+            }
+
+            /* 
+                Qualquer valor que colocarmos no position do ul (exceto static)
+                fará com que o <ul> se torne referência.
+            */
+            ul {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <h2>Título 1</h2>
+                <p>Texto texto texto</p>
+                <p>Mais texto</p>
+            </li>
+            <li>
+                <h2>Título 234</h2>
+                <p>Texto texto texto</p>
+                <p>Mais texto</p>
+            </li>
+        </ul>
+    </body>
+</html>

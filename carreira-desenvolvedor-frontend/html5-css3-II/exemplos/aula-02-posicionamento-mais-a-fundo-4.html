@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* Dessa forma o h2 ficará no topo da janela, sobreposto, devido ao li estar definido com 'static'. */
+            h2 {
+                position: absolute;
+                top: 0;
+            }
+
+            li {
+                position: static;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <h2>Título 1</h2>
+                <p>Texto texto texto da li 1</p>
+                <p>Mais texto da li 1</p>
+            </li>
+            <li>
+                <h2>Título 234</h2>
+                <p>Texto texto texto da li 2</p>
+                <p>Mais texto da li 2</p>
+            </li>
+        </ul>
+    </body>
+</html>

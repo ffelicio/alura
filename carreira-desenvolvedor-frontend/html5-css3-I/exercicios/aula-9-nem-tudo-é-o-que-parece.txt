@@ -1,0 +1,27 @@
+TÉCNICAS DE IMAGE REPLACEMENT
+
+Ferramentas de busca, ao examinarem nossos sites, levam em conta apenas o HTML.
+Que implicações isso traz quando usamos a técnica image replacement?
+Por não examinarem o CSS, as ferramentas de busca "não encontrarão" e, portanto, "não indexarão" as imagens referenciadas no CSS.
+Isso pode ser ou não interessante. Se usamos corretamente a técnica "image replacement", apenas imagens secundárias, supérfluas
+para o conteúdo, serão ignoradas; "as imagens mais importantes ficam no HTML" e, portanto, são indexadas.
+
+OUTRAS FORMAS
+
+Fizemos o image replacement usando, entre outras, a propriedade "text-indent" com um valor negativo bem grande. Contudo, essa é
+apenas uma forma possível de aplicar essa técnica.
+Trocar o "text-indent: -9999px" por "font-size: 0" funciona também.
+Então qual desses métodos usar? Quais as vantagens e desvantagens de cada método.
+A propriedade "text-indent" tem um comportamento que "depende da língua usada na página". Em algumas línguas, como o árabe,
+escrevemos da direita para a esquerda. Então, se nossa página está escrita nessa direção, o "text-indent" tem seu comportamento
+invertido: um valor "positivo" joga o texto para a esquerda e, por outro lado, um valor "negativo" joga o texto para a direita.
+Assim, se usamos um "text-indent" bem negativo e sua página está escrita nessa direção, o texto do elemento com "image replacement"
+ficará bastante para a direita e, portanto, fará aparecer no navegador uma barra de rolagem horizontal.
+
+Um outro problema com o valor muito grande e negativo da propriedade "text-indent" é que esse valor muito grande pode fazer
+com que o navegador gaste muita memória para exibir a página, pois agora ele precisa levar em consideração um elemento
+muito grande nos cálculos para a exibição da página.
+
+Por outro lado, usar o "font-size" com valor zero não é bem interpretado por todos os navegadores. Alguns simplesmente "ignoram"
+uma declaração desse tipo; outros, mesmo com o tamanho zerado, "mostram" o texto numa fonte pequena. Ou seja, há um problema de
+compatibilidade com essa técnica, que a propriedade "text-indent" não tem.

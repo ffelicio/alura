@@ -1,0 +1,195 @@
+body {
+	font-family: "Crimson Text", "Times New Roman", serif;
+	background-color: #F2FFFC;
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+h1, h2 {
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+.titulo-principal {
+	text-align: center;
+	background-color: #851944;
+	color: #FFF;
+	padding: 2rem;
+	border-bottom: 10px solid black;
+	font-size: 300%;
+	text-transform: uppercase;
+}
+
+p {
+	text-align: justify;
+	margin: 20px 0;
+}
+
+.citacao-bio {
+	background-color: #D9E5E3;
+	border: 10px solid #C2CCCA;
+	width: 250px;
+	box-sizing: border-box;
+	margin: 20px 40px;
+}
+
+.navegacao-site {
+	text-align: center;
+	background-color: #3C1D3D;
+	color: #F2FFFC;
+}
+
+.navegacao-site a {
+	color: inherit;
+	font-family: "Open Sans Condensed", sans-serif;
+}
+
+nav a {
+	text-transform: lowercase;
+}
+
+main {
+	float: left;
+	width: 85%;
+	padding-bottom: 60px;
+}
+
+main a {
+	color: #851944;
+}
+
+.citacao-bio, .navegacao-site, .rodape-pagina {
+    padding: 20px;
+}
+
+.container {
+	width: 720px;
+	margin: auto;
+	padding: 30px 0;
+}
+
+.navegacao-site h1 {
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+.subtitulo-texto {
+	font-size: 30px;
+}
+
+.icones-redes-sociais li {
+	display: inline-block;
+}
+
+.icones-redes-sociais a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+	text-indent: -99999px;
+	/* font-size: 0; */
+}
+
+.github {
+    background-image: url(../img/github.png);
+}
+
+.twitter {
+    background-image: url(../img/twitter.png);
+}
+
+.linkedin {
+    background-image: url(../img/linkedin.png);
+}
+
+.minha-foto, .navegacao-site {
+	border-left: 10px solid black;
+	border-bottom: 10px solid black;
+	box-sizing: border-box;
+}
+
+.navegacao-site {
+	/* 1º forma */
+    position: relative;
+	top: 250px;
+	width: 15%;
+	float: right;
+	/* 2º forma */
+	/* position: absolute;
+    top: 250px;
+    right: 0; */
+}
+
+.minha-foto {
+	width: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+cite {
+    font-style: italic;
+    float: right;
+    display: block;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.rodape-pagina {
+	background-color: #000;
+	color: #F2FFFC;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* .recomendacao {
+    border: 10px solid #C2CCCA;
+    border-bottom-color: #333;
+    border-right-color: #FFF;
+} */
+
+/* Formas */
+/* Botão de pause */
+/* div#teste {
+    border-left: 10px solid red;
+    border-right: 10px solid red;
+    width: 5px;
+    height: 30px;
+} */
+
+/* Triângulo */
+/* div#teste {
+    border-bottom: 30px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    width: 0;
+} */
+
+/* Gravata borboleta */
+/* div#teste {
+    border-left: 30px solid red;
+    border-bottom: 30px solid transparent;
+    border-top: 30px solid transparent;
+    border-right: 30px solid red;
+    width: 0;
+} */
+
+/* Triângulo reto */
+/* div#teste {
+    border-left: 30px solid red;
+    border-bottom: 30px solid red;
+    border-top: 30px solid transparent;
+    border-right: 30px solid transparent;
+    width: 0;
+} */

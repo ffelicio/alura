@@ -1,0 +1,3 @@
+O que ganhamos ao usar um "reset" nos nossos sites?
+Devemos usar um reset nos nossos projetos para eliminar diferenças de layout entre navegadores e bugs específicos de alguns
+navegadores. Com isso, ganhamos uma base sólida para desenvolvermos nosso site.

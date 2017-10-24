@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            .face {
+                display: block;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            /*
+                A primeira face temos que trazer para mais perto do usuário.
+                Afinal, agora estão todas no meio do cubo! Então fazemos a translação dela no eixo Z.
+            */
+            .frente {
+                background-color: red;
+                transform: translateZ(100px);
+            }
+            /*
+                A segunda face será a lateral direita do cubo.
+                Então precisamos virá-la para o lado direito primeiro.
+                Para isso, fazemos uma rotação no eixo Y de 90 graus.
+                A segunda face será a lateral direita do cubo.
+                Então precisamos virá-la para o lado direito primeiro.
+                Para isso, fazemos uma rotação no eixo Y de 90 graus.
+                Depois disso, transladamos ela no eixo X para colocá-la no lado do cubo.
+                Depois disso, transladamos ela no eixo X para colocá-la no lado do cubo.
+            */
+            .direita {
+                background-color: blue;
+                transform: translateX(100px) rotateY(90deg);
+            }
+            /*
+                Fazemos o mesmo para a face da lateral esquerda, porém rotacionando -90 graus.
+                E fazemos algo parecido com as faces superior e inferior:
+                rotacionamos agora no eixo X 90 (ou -90) graus e transladamos no eixo Y.
+            */
+            .esquerda {
+                background-color: green;
+                transform: translateX(-100px) rotateY(-90deg);
+            }
+            .cima {
+                background-color: yellow;
+                transform: translateY(100px) rotateX(90deg);
+            }
+            .baixo {
+                background-color: magenta;
+                transform: translateY(-100px) rotateX(-90deg);
+            }
+            .tras {
+                background-color: cyan;
+                transform: translateZ(-100px) rotateY(180deg);
+            }
+            .cubo {
+                transform-style: preserve-3d;
+                width: 200px;
+                height: 200px;
+                position: relative;
+                top: 100px;
+                left: 100px;
+                transform: rotateX(10deg) rotateY(10deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cubo">
+            <div class="face frente"></div>
+            <div class="face direita"></div>
+            <div class="face esquerda"></div>
+            <div class="face cima"></div>
+            <div class="face baixo"></div>
+            <div class="face tras"></div>
+        </div>
+</body>
+</html>

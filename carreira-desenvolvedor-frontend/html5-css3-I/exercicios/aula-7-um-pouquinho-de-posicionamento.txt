@@ -1,0 +1,4 @@
+Qual a diferença entre elementos inline e inline-block?
+Elementos inline não podem ter altura definida.
+O valor inline-block para a propriedade display surgiu para podermos definir altura e largura em elementos inline. Fora isso,
+ambos os elementos podem ter um padding definido, ambos ficam em linha e ambos são suportados por todos os navegadores modernos.
