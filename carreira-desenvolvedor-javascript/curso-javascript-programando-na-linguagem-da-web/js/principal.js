@@ -26,7 +26,7 @@ for(var i = 0; i < totalPacientes; i++) {
         // paciente.style.color = 'red';
         
         /*
-         * Para palavras compostas de estilo como por exemplo, 'background-color', o javascript não aceita essa grafia.
+         * Para palavras compostas de estilo, como por exemplo 'background-color', o javascript não aceita essa grafia.
          * A mesma deverá ser feita com o padrão camelCase, conforme o exemplo abaixo.
          */
         // paciente.style.backgroundColor = 'lightcoral';
