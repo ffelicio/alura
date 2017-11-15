@@ -1,6 +1,6 @@
 /**
- * querySelector = resgata somente uma valor mesmo que a informação passada no argumento seja uma classe.
- * querySelectorAll = monta uma lista com os valores passados no argumento
+ * querySelector = resgata somente um valor, mesmo que a informação passada no argumento, seja uma classe.
+ * querySelectorAll = retorna uma lista de elementos, de acordo com a informação passada no argumento(id, classe, elemento html, ...)
  * 
  */
 
