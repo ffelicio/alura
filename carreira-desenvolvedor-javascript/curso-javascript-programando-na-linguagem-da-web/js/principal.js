@@ -65,5 +65,45 @@ botaoAdicionarPaciente.addEventListener('click', function(event) {
      */
     event.preventDefault();
 
-    console.log(this.classList);
+    var form = document.querySelector('#form');
+    var tbody = document.querySelector('#tabela-pacientes');
+    var nome = form.nome.value;
+    var peso = form.peso.value;
+    var altura = form.altura.value;
+    var gordura = form.gordura.value;
+
+    // Criando os elementos para incluir na tabela
+    var pacienteTr = document.createElement('tr');
+    var nomeTd = document.createElement('td');
+    var pesoTd = document.createElement('td');
+    var alturaTd = document.createElement('td');
+    var gorduraTd = document.createElement('td');
+    var imcTd = document.createElement('td');
+
+    nomeTd.textContent = nome;
+    nomeTd.classList.add('info-nome');
+    pesoTd.textContent = peso;
+    pesoTd.classList.add('info-peso');
+    alturaTd.textContent = altura;
+    alturaTd.classList.add('info-altura');
+    gorduraTd.textContent = gordura;
+    gorduraTd.classList.add('info-gordura');
+    imcTd.textContent = 0;
+    imcTd.classList.add('info-imc');
+
+    // Colocando as informações na tr
+    pacienteTr.appendChild(nomeTd);
+    pacienteTr.appendChild(pesoTd);
+    pacienteTr.appendChild(alturaTd);
+    pacienteTr.appendChild(gorduraTd);
+    pacienteTr.appendChild(imcTd);
+
+    pacienteTr.classList.add('paciente');
+
+    // Incluíndo na tabela os dados formatados
+    tbody.appendChild(pacienteTr);
 });
+
+function calcularImc() {
+    
+}
