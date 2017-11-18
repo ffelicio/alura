@@ -6,6 +6,7 @@
 
 var pacientes = document.querySelectorAll('.paciente');
 var totalPacientes = pacientes.length;
+var botaoAdicionarPaciente = document.querySelector('#adicionar-paciente');
 
 for(var i = 0; i < totalPacientes; i++) {
     var paciente = pacientes[i],
@@ -55,3 +56,14 @@ for(var i = 0; i < totalPacientes; i++) {
     }
 }
 
+/**
+ * Adicionando event ao clicar no botão
+ */
+botaoAdicionarPaciente.addEventListener('click', function(event) {
+    /**
+     * Essa função previne os comportamentos padrões dos usuários do browser.
+     */
+    event.preventDefault();
+
+    console.log(this.classList);
+});
