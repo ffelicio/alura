@@ -1,0 +1,59 @@
+/**
+ * Adicionando event ao clicar no botão
+ */
+var botaoAdicionarPaciente = document.querySelector('#adicionar-paciente');
+botaoAdicionarPaciente.addEventListener('click', function(event) {
+    /**
+     * Essa função previne os comportamentos padrões dos usuários do browser.
+     */
+    event.preventDefault();
+
+    var form = document.querySelector('#form');
+    var tbody = document.querySelector('#tabela-pacientes');
+    var paciente = obtemPacienteDoFormulario(form);
+    var pacienteTr = montaTr(paciente);
+
+    // Incluíndo na tabela os dados formatados
+    tbody.appendChild(pacienteTr);
+
+    // Limpa os dados do formulário.
+    form.reset();
+});
+
+function obtemPacienteDoFormulario(form) {
+    // Cria um objeto paciente e seus atributos
+    var paciente = {
+        nome: form.nome.value,
+        peso: form.peso.value,
+        altura: form.altura.value,
+        gordura: form.gordura.value,
+        imc: calculaImc(form.peso.value, form.altura.value)
+    };
+
+    return paciente;
+}
+
+// Criando os elementos para incluir na tabela
+function montaTr(paciente) {
+    var pacienteTr = document.createElement('tr');
+    pacienteTr.classList.add('paciente');
+
+    // Colocando as informações na tr
+    pacienteTr.appendChild(montaTd(paciente.nome, 'info-nome'));
+    pacienteTr.appendChild(montaTd(paciente.peso, 'info-peso'));
+    pacienteTr.appendChild(montaTd(paciente.altura, 'info-altura'));
+    pacienteTr.appendChild(montaTd(paciente.gordura, 'info-gordura'));
+    pacienteTr.appendChild(montaTd(paciente.imc, 'info-imc'));
+
+    return pacienteTr;
+}
+
+/**
+ * Essa função cria a td já inserindo os valores e a classe css respectiva. 
+ */
+function montaTd(dado, classeCss) {
+    var td = document.createElement('td');
+    td.textContent = dado;
+    td.classList.add(classeCss);
+    return td;
+}
