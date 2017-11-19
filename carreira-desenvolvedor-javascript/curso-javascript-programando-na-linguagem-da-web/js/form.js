@@ -23,10 +23,8 @@ botaoAdicionarPaciente.addEventListener('click', function(event) {
         return;
     }
 
-    var pacienteTr = montaTr(paciente);
-
     // Incluíndo na tabela os dados formatados
-    tbody.appendChild(pacienteTr);
+    tbody.appendChild(montaTr(paciente));
 
     // Limpa os dados do formulário.
     form.reset();
@@ -70,7 +68,7 @@ function montaTd(dado, classeCss) {
     return td;
 }
 
-// Retorna uma string com a informação do erro.
+// Retorna uma lista com as informações dos erros.
 function validaPaciente(paciente) {
     var erros = [];
 
