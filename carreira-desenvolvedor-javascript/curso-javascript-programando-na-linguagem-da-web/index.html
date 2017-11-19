@@ -74,6 +74,9 @@
 
 		<section class="container">
 			<h2 id="titulo-form">Adicionar novo paciente</h2>
+
+			<ul id="mensagens-erro"></ul>
+
 			<form id="form">
 				<div class="grupo">
 					<label for="nome">Nome:</label>
@@ -89,7 +92,7 @@
 				</div>
 				<div class="grupo">
 					<label for="gordura">% de Gordura:</label>
-					<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+					<input id="gordura" name="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
 				</div>
 		
 				<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>

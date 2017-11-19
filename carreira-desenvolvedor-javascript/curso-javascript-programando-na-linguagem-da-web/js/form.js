@@ -11,6 +11,18 @@ botaoAdicionarPaciente.addEventListener('click', function(event) {
     var form = document.querySelector('#form');
     var tbody = document.querySelector('#tabela-pacientes');
     var paciente = obtemPacienteDoFormulario(form);
+    var erros = validaPaciente(paciente);
+    var ulMensagemErro = document.querySelector('#mensagens-erro');
+
+    // A função innerHTML permite controlar o conteúdo interno de um elemento. No caso abaixo, a ul.
+    ulMensagemErro.innerHTML = '';
+
+    // Se retornou erro
+    if(erros.length > 0) {
+        exibeMensagensDeErro(erros, ulMensagemErro);
+        return;
+    }
+
     var pacienteTr = montaTr(paciente);
 
     // Incluíndo na tabela os dados formatados
@@ -56,4 +68,35 @@ function montaTd(dado, classeCss) {
     td.textContent = dado;
     td.classList.add(classeCss);
     return td;
+}
+
+// Retorna uma string com a informação do erro.
+function validaPaciente(paciente) {
+    var erros = [];
+
+    if(paciente.nome.length == 0) {
+        erros.push('Preencha o nome do paciente.');
+    }
+
+    if(!validaPeso(paciente.peso)) {
+        erros.push('Peso inválido.');
+    }
+
+    if(!validaAltura(paciente.altura)) {
+        erros.push('Altura inválida.');
+    }
+
+    if(paciente.gordura.length == 0) {
+        erros.push('Preencha o percentual de gordura do paciente.');
+    }
+
+    return erros;
+}
+
+function exibeMensagensDeErro(erros, ulMensagemErro) {
+    erros.forEach(function(erro) {
+        var li = document.createElement('li');
+        li.textContent = erro;
+        ulMensagemErro.appendChild(li);
+    });
 }
