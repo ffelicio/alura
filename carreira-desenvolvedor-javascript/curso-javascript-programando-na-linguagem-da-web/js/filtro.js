@@ -18,23 +18,10 @@ filtrarTabela.addEventListener('input', function() {
             var tdNome = paciente.querySelector('.info-nome');
             var nome = tdNome.textContent;
 
-            /**
-             * Para utilização da expressão regular no javascript
-             * basta utilizar o objeto 'RegExp'.
-             * Esse objeto aceita 2 parâmetros:
-             * 1 - O primeiro será o texto que queremos buscar, no caso, o termo digitado no campo de busca.
-             * 2 - O segundo parâmetro será referente as características dos termos que devem ser buscados.
-             * O parâmetro 'i' é para pesquisar com case insensitive
-             */
-            var expressao = new RegExp(valorDigitado, 'i');
+            var existeTexto = filter.byRegex(valorDigitado, nome);
+            // var existeTexto = filter.bySubstr(valorDigitado, nome);
 
-            /**
-             * Para analisar o conteúdo é utilizada a função 'test'.
-             * Ele irá testar se no conteúdo digitado contém pelo menos um pedaço do que existe
-             * na coluna info-nome(primeira coluna da tabela).
-             * Essa função retorna 'true' ou 'false'
-             */
-            if( ! expressao.test(nome) ) {
+            if( ! existeTexto ) {
                 paciente.classList.add('invisivel');
             } else {
                 paciente.classList.remove('invisivel');
@@ -48,3 +35,32 @@ filtrarTabela.addEventListener('input', function() {
         }
     }
 });
+
+var filter = {
+    byRegex: function(valorDigitado, nomePaciente) {
+        /**
+         * Para utilização da expressão regular no javascript
+         * basta utilizar o objeto 'RegExp'.
+         * Esse objeto aceita 2 parâmetros:
+         * 1 - O primeiro parâmetro que devemos passar para o construtor é o padrão (o texto da expressão regular, o que deve ser buscado).
+         * 2 - O segundo parâmetro são uma ou mais flags (representando como queremos que a expressão regular busque).
+         * Por exemplo, podemos definir que não queremos que haja distinção entre letras maiúsculas e minúsculas, através da flag 'i'.
+         */
+        var expressao = new RegExp(valorDigitado, 'i');
+    
+        /**
+         * Para analisar o conteúdo é utilizada a função 'test'.
+         * Ele irá testar se no conteúdo digitado contém pelo menos um pedaço do que existe
+         * na coluna info-nome(primeira coluna da tabela).
+         * Essa função retorna 'true' ou 'false'
+         */
+        return expressao.test(nomePaciente);
+    },
+    bySubstr: function(valorDigitado, nomePaciente) {
+        var comparavel = nomePaciente.substr(0, valorDigitado.length);
+        var comparavelMinusculo = comparavel.toLowerCase();
+        var valorDigitadoMinusculo = valorDigitado.toLowerCase();
+
+        return (valorDigitadoMinusculo == comparavelMinusculo);
+    }
+}
