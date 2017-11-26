@@ -9,7 +9,6 @@ botaoAdicionarPaciente.addEventListener('click', function(event) {
     event.preventDefault();
 
     var form = document.querySelector('#form');
-    var tbody = document.querySelector('#tabela-pacientes');
     var paciente = obtemPacienteDoFormulario(form);
     var erros = validaPaciente(paciente);
     var ulMensagemErro = document.querySelector('#mensagens-erro');
@@ -23,12 +22,18 @@ botaoAdicionarPaciente.addEventListener('click', function(event) {
         return;
     }
 
-    // Incluíndo na tabela os dados formatados
-    tbody.appendChild(montaTr(paciente));
+    adicionarPacienteNaTabela(paciente);
 
     // Limpa os dados do formulário.
     form.reset();
 });
+
+function adicionarPacienteNaTabela(paciente) {
+    var pacienteTr = montaTr(paciente);
+    var tbody = document.querySelector('#tabela-pacientes');
+    // Incluíndo na tabela os dados formatados
+    tbody.appendChild(pacienteTr);
+}
 
 function obtemPacienteDoFormulario(form) {
     // Cria um objeto paciente e seus atributos
