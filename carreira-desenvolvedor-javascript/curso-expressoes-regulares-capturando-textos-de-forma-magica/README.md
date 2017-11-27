@@ -17,8 +17,11 @@ Uma expressão regular sozinha é apenas uma string. É preciso ter um software 
 ## Quais dos caracteres abaixo não representa um meta-char?
 
 Asterisco: *
+
 Chave: {
+
 e comercial: & <= Não representa um meta-char
+
 Ponto: .
 
 ## Exemplos:
@@ -30,7 +33,9 @@ Ponto: .
 ###### Expressão regular para encontrar números ips:
 
 '126.1.112.34'
+
 '128.126.12.244'
+
 '192.168.0.34'
 
 \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}
