@@ -52,4 +52,4 @@ Verificando a ocorrência das divs no html abaixo.
 <div>Teste 2</div>
 ```
 
-- `<?div>`
+- `<?div>` - Expressão regular
