@@ -55,3 +55,17 @@ Verificando a ocorrência das divs no html abaixo.
 - `<?div>` - Expressão regular
 
 Repare que usamos o meta-char **?** para sinalizar que o **/** é opcional.
+
+## 3 - Qual é a classe ?
+
+Qual é a classe correta para definir os números entre **1** e **3** E **6** e **9**?
+
+- [ ] [1-3-6-9]
+- [x] [1-36-9]
+- [ ] {1-36-9}
+- [ ] [\1-\3\6-\9]
+
+1. 123456789 - **123**45**6789**
+2. 123456 - **123**45**6**
+3. 3456 - **3**45**6**
+4. 123456778899 - **123**45**6778899**
