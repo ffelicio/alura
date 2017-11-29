@@ -28,3 +28,17 @@ A quantidade de vezes que essa classe de caracteres deve aparecer é definida po
 
 - `[.-]` - ponto ou hífen, zero, uma ou mais vezes
 - `[.-]{1}` - ponto ou hífen, zero ou uma vez
+
+No nosso caso `[.-]` é opcional, pode ter ou não ter, mas uma vez apenas. Dentro da regex, isso é declarado através do meta-char ponto de interrogação **(?)**. O ponto de interrogação **(?)**, que significa zero ou uma vez, é mais um **quantifier**. Assim podemos combinar a classe `[.-]` com o quantifier `?`:
+
+- `[.-]?` - ponto ou hífen zero ou uma vez.
+
+Aplicando a regex `\d{3}[.-]?\d{3}[.-]?\d{3}[.-]?\d{2}`, atenderá os 2 formatos apresentados.
+
+Sabendo disso poderíamos reescrever a regex com `[0123456789]`
+
+```
+[0123456789]{3}[.-]?[0123456789]{3}[.-]?[0123456789]{3}[.-]?[0123456789]{2}
+ou
+[0-9]{3}[.-]?[0-9]{3}[.-]?[0-9]{3}[.-]?[0-9]{2}
+```
