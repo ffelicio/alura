@@ -35,7 +35,7 @@ No nosso caso `[.-]` é opcional, pode ter ou não ter, mas uma vez apenas. Dent
 
 Aplicando a regex `\d{3}[.-]?\d{3}[.-]?\d{3}[.-]?\d{2}`, atenderá os 2 formatos apresentados.
 
-Sabendo disso poderíamos reescrever a regex com `[0123456789]`
+Sabendo disso poderíamos reescrever a regex com
 
 ```
 [0123456789]{3}[.-]?[0123456789]{3}[.-]?[0123456789]{3}[.-]?[0123456789]{2}
