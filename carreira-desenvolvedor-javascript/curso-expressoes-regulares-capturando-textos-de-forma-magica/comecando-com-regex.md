@@ -1,3 +1,5 @@
+# Começando com Regex
+
 ## O que é Regex?
 Regex, ou expressões regulares, é uma linguagem para encontrar padrões de texto.
 
