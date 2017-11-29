@@ -53,3 +53,5 @@ Verificando a ocorrência das divs no html abaixo.
 ```
 
 - `<?div>` - Expressão regular
+
+Repare que usamos o meta-char **?** para sinalizar que o **/** é opcional.
