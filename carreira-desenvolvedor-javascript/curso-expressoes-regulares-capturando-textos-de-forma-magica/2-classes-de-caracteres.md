@@ -186,10 +186,10 @@ Um **word char** é apresentado com **\w** e é um atalho para **[A-Za-z0-9_]**.
 
 Qual expressão regular podemos usar para encontrar o padrão **19h32min16s**?
 
-[ ] .{2}h.{2}min.{2}s
-[ ] \[0-9]{2}h\[0-9]{2}min\[0-9]{2}s
-[ ] \.{2}h\.{2}min\.{2}s
-[x] \d{2}h\d{2}min\d{2}s
+- [ ] .{2}h.{2}min.{2}s
+- [ ] \[0-9]{2}h\[0-9]{2}min\[0-9]{2}s
+- [ ] \.{2}h\.{2}min\.{2}s
+- [x] \d{2}h\d{2}min\d{2}s
 
 Como não precisamos limitar os números nesse padrão, podemos utilizar a classe padrão \d para trabalhar com dígitos.
 
@@ -322,10 +322,10 @@ Sabendo disso e dado o seguinte alvo:
 
 Qual regex seleciona o alvo inteiro apenas em um match?
 
-[ ] [a-z]?+*
-[x] [a-z?*+]+
-[ ] [a-z?*+] - Nesse caso, dá match 19 vezes
-[ ] 
+- [ ] [a-z]?+*
+- [x] [a-z?*+]+
+- [ ] [a-z?*+] - Nesse caso, dá match 19 vezes
+- [ ] a-z?+*
 
 A grande maioria de **meta-chars** são valores literais na definição da classe (dentro de **[]**). Por exemplo, a classe abaixo define apenas valores literais:
 
